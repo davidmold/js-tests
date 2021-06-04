@@ -7,6 +7,13 @@ To clone it into a directory and give the project a new name, just use
 git clone https://github.com/davidmold/js-tests my-project
 ```
 
+Then run
+```
+npm install
+```
+To install express
+
+
 # Usage
 
 Start the server with
