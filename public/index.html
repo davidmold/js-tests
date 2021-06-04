@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Simple testing in HTML</title>
+    <style>
+      body{
+        font-family:'Consolas', 'Courier New', Courier, monospace;
+      }
+      .padded-box{
+        max-width:400px;
+        border:1px solid #ccc;
+        padding:10px;
+        margin:10px;
+        box-sizing: border-box;
+      }
+    </style>
+    <script>
+      function checksize() {
+        let el =  document.getElementById('mybox')
+        let ms = document.getElementById('message')
+        let info = el.getBoundingClientRect()
+        message.innerText = 'getBoundingClientRect\n' + JSON.stringify(info, null, 2)
+      }
+      window.onload = checksize
+      window.addEventListener('resize', checksize)
+    </script>
+  </head>
+  <body>
+    <div class="padded-box" id="mybox">
+      This is a simple padded box. We will put lots of text in here so that it wraps
+      and gives us some results.
+    </div>
+    <div class="padded-box" id="message"></div>
+  </body>
+</html>
