@@ -1,5 +1,6 @@
 import express from 'express'
 const app = express()
+const port = 31634
 app.use(express.static('./public'))
-app.listen(31634)
-console.log('server started on http://localhost:31634')
+app.listen(port)
+console.log(`server started on http://localhost:${port}`)
